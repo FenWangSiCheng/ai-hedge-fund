@@ -24,7 +24,7 @@ def add_common_args(
         "--tickers",
         type=str,
         required=require_tickers,
-        help="Comma-separated list of stock ticker symbols (e.g., AAPL,MSFT,GOOGL)",
+        help="Comma-separated list of ticker symbols (e.g., AAPL,MSFT,GOOGL or 600519,513010)",
     )
     if include_analyst_flags:
         parser.add_argument(
@@ -284,5 +284,4 @@ def parse_cli_inputs(
         show_agent_graph=getattr(args, "show_agent_graph", False),
         raw_args=args,
     )
-
 
